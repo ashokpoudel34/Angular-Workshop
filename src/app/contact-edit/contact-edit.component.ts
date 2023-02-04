@@ -9,6 +9,8 @@ export class ContactEditComponent implements OnInit {
 
   constructor() { }
 
+  fname : string = "Ashok";
+
   ngOnInit(): void {
   }
 

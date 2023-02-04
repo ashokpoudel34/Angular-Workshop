@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Contact } from '../contact';
+import { ContactService } from '../services/contact.service';
 
 @Component({
   selector: 'app-contact-details',
@@ -31,16 +33,18 @@ export class ContactDetailsComponent implements OnInit {
   //   note: "",
   // } ;
 
-  constructor() { }
+  constructor(private route : ActivatedRoute ,private contactService : ContactService) {}
 
   ngOnInit(): void {
+    let id = this.route.snapshot.params['id'];
+    this.contact = this.contactService.getContactDetails(id);
   }
 
-  btnClicked1(){
-    console.log("Button is clicked...");
-  }
-  btnClicked2(){
-    console.log("Button is clicked...");
-  }
+  // btnClicked1(){
+  //   console.log("Button is clicked...");
+  // }
+  // btnClicked2(){
+  //   console.log("Button is clicked...");
+  // }
 
 }

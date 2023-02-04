@@ -17,7 +17,7 @@
           </div>
           <div class="col-8">
             <h2 class="lead text-truncate">
-              <a routerLink="/details" ><b>{{contact.title}} {{contact.first_name}} {{contact.last_name}}</b></a>
+              <a [routerLink]="['/details',contact.id]" ><b>{{contact.title}} {{contact.first_name}} {{contact.last_name}}</b></a>
 
               <!-- <a href="#" (click)="contactSelected(contact)"><b>{{contact.title}} {{contact.first_name}} {{contact.last_name}}</b></a> -->
             </h2>

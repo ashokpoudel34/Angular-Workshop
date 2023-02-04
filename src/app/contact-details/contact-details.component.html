@@ -34,7 +34,7 @@
           <h5 class="custom-secondary-color">Others</h5>
           <div>
             <!-- <button (click)="btnClicked1()" class="btn custom-secondary-bg-color btn-sm mr-2"> -->
-            <button routerLink="/edit" class="btn custom-secondary-bg-color btn-sm mr-2">
+            <button [routerLink]="['/edit',contact.id]" class="btn custom-secondary-bg-color btn-sm mr-2">
               Edit
             </button>
             <button class="btn btn-danger btn-sm">Delete</button>

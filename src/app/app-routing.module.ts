@@ -10,8 +10,8 @@ const routes: Routes = [
   {path: "",component:ContactListComponent},
   {path: "list",component:ContactListComponent},
   {path: "add",component:ContactAddComponent},
-  {path: "edit",component:ContactEditComponent},
-  {path: "details",component:ContactDetailsComponent},
+  {path: "edit/:id",component:ContactEditComponent},
+  {path: "details/:id",component:ContactDetailsComponent},
   {path: "**",component:FourzerofourComponent},
 ];
 
