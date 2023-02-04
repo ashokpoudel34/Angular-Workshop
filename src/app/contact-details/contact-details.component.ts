@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Contact } from '../contact';
 
 @Component({
   selector: 'app-contact-details',
@@ -8,6 +9,25 @@ import { Component, OnInit } from '@angular/core';
 export class ContactDetailsComponent implements OnInit {
 
   haveRights : boolean = false;
+
+  @Input('contactDetails') contact : Contact = {
+    id: 1,
+    title: "",
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone1: "",
+    phone2: "",
+    address: {
+      line1: "",
+      line2: "",
+      city: "",
+      state: "",
+      zip: "",
+      country: "",
+    },
+    note: "",
+  } ;
 
   constructor() { }
 

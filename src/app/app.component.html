@@ -4,6 +4,6 @@
 <app-contact-list [contacts]="contactList" (contactDetails)="getDetails($event)"></app-contact-list>
 
 <!-- ContactDetails -->
-<app-contact-details></app-contact-details>
+<app-contact-details [contactDetails]="selectedContactData" ></app-contact-details>
 
 <app-contact-add></app-contact-add>
