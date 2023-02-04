@@ -190,4 +190,28 @@ export class AppComponent {
       note: "Assamese",
     },
   ];
+
+  selectedContactData : Contact = {
+    id: 1,
+    title: "",
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone1: "",
+    phone2: "",
+    address: {
+      line1: "",
+      line2: "",
+      city: "",
+      state: "",
+      zip: "",
+      country: "",
+    },
+    note: "",
+  } ;
+
+  getDetails(contact : Contact){
+    this.selectedContactData = contact;
+    console.log(this.selectedContactData);
+  }
 }
