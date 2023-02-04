@@ -9,6 +9,8 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
 import { ContactAddComponent } from './contact-add/contact-add.component';
 import { ContactEditComponent } from './contact-edit/contact-edit.component';
 import { FormsModule } from '@angular/forms';
+import { FourzerofourComponent } from './fourzerofour/fourzerofour.component';
+import { ContactService } from './services/contact.service';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,15 @@ import { FormsModule } from '@angular/forms';
     ContactListComponent,
     ContactDetailsComponent,
     ContactAddComponent,
-    ContactEditComponent
+    ContactEditComponent,
+    FourzerofourComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

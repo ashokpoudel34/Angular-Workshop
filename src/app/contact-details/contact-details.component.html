@@ -33,10 +33,12 @@
         <div class="card-header d-flex justify-content-between">
           <h5 class="custom-secondary-color">Others</h5>
           <div>
-            <button (click)="btnClicked1()" class="btn custom-secondary-bg-color btn-sm mr-2">
+            <!-- <button (click)="btnClicked1()" class="btn custom-secondary-bg-color btn-sm mr-2"> -->
+            <button routerLink="/edit" class="btn custom-secondary-bg-color btn-sm mr-2">
               Edit
             </button>
-            <button [disabled]="!haveRights" (click)="btnClicked2()" class="btn btn-danger btn-sm">Delete</button>
+            <button class="btn btn-danger btn-sm">Delete</button>
+            <!-- <button [disabled]="!haveRights" (click)="btnClicked2()" class="btn btn-danger btn-sm">Delete</button> -->
           </div>
         </div>
         <div class="card-body"> 
