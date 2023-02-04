@@ -22,5 +22,8 @@ contactList : Contact[] = [];
 
   ngOnInit(): void {
     this.contactList = this.contactService.getContactList();
+    // //this.contactService.getContactList().subscribe(res => {
+    //   this.contactList = res ;
+    // });
   }
 }

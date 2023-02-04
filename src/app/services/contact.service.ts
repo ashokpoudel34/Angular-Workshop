@@ -6,6 +6,9 @@ import { Contact } from '../contact';
 })
 export class ContactService {
 
+  // constructor(private http:HttpClient){}
+
+
   contactList:Contact[] = [
     {
       id: 1,
@@ -189,12 +192,13 @@ export class ContactService {
     },
   ];
 
-  getContactList() : Contact[] {
+  getContactList() : Contact[] { //getContactList() : Observable<Contact[]> {
+    // return this.http.get<Contact[]>("localhost/contactapp/php_file.php");
     return this.contactList;
   }
 
   getContactDetails(id:number){
+    
     return this.contactList.filter(contact => {return contact.id == id})[0];
   }
-  constructor() { }
 }

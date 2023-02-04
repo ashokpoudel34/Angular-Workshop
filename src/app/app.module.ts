@@ -25,7 +25,7 @@ import { ContactService } from './services/contact.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [ContactService],
   bootstrap: [AppComponent]
