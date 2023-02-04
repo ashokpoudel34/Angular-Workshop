@@ -9,12 +9,12 @@ export class NavComponent implements OnInit {
 
   appTitle = "ParulUni";
 
-  constructor(){
-
-  }
+  constructor() { }
 
   ngOnInit(): void {
-      
   }
 
+  getTitle() {
+    return this.appTitle;
+  }
 }
