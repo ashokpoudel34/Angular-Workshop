@@ -15,7 +15,7 @@
           <h5 class="custom-secondary-color">Add Contact Details</h5>
         </div>
         <div class="card-body">
-          <form name="newPersonForm" class="needs-validation" novalidate>
+          <form #frmAdd="ngForm" (submit) ="addContact(frmAdd)"  name="newPersonForm" class="needs-validation" novalidate>
             <div class="row mb-2">
               <div class="col-md-2">
                 <div class="form-group">
@@ -26,7 +26,7 @@
               <div class="col-md-5">
                 <div class="form-group">
                   <label for="first_name"><span class="text-red">*</span>First Name:</label>
-                  <input [(ngModel)]="fname" type="text" class="form-control" name="first_name" placeholder="First Name" required />
+                  <input [(ngModel)]="first_name" #fname="ngModel" type="text" class="form-control" [ngClass]="(fname.touched && fname.valid)?'':'is-invalid'" name="first_name" placeholder="First Name" required />
                   <div class="invalid-feedback">
                     Please enter first name.
                   </div>
